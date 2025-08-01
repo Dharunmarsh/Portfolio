@@ -1,0 +1,12 @@
+/* === Only Needed if You Don’t Want to Use group-hover === */
+
+.article-wrapper:hover .container-project img {
+  transform: scale(1.05);
+}
+
+/* === Optional: Keep this if you want smoother SVG hover rotation instead of Tailwind’s abrupt rotate class === */
+.article-wrapper:hover .project-hover {
+  transform: rotate(-45deg);
+  background-color: #d4e0fc;
+  animation-duration: 1000ms;
+}

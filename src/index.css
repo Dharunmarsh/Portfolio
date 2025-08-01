@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lexend+Deca:wght@100..900&family=Noto+Color+Emoji&family=DM+Serif+Display:ital@0;1&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Farsan&family=Bad+Script&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Jersey+15&family=Kavivanar&family=Noto+Color+Emoji&family=Press+Start+2P&display=swap');
+
+
+/* ✅ Apply default font globally */
+body {
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* ✅ Optional extra utility font classes (not required if using Tailwind's font-poppins etc) */
+.font-lexend {
+  font-family: 'Lexend Deca', sans-serif;
+}
+.font-emoji {
+  font-family: 'Noto Color Emoji', sans-serif;
+}
+.font-serif {
+  font-family: 'DM Serif Display', serif;
+}
+.font-comic {
+  font-family: 'Comic Relief', cursive;
+}
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+.font-edu {
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+.font-farsan {
+  font-family: 'Farsan', cursive;
+}
+.font-script {
+  font-family: 'Bad Script', cursive;
+}
+.code-style {
+  font-family: "Google Sans Code", monospace;
+}
+.arcade-title {
+  font-family: "Jersey 15", cursive;
+}
+.handwritten {
+  font-family: "Kavivanar", cursive;
+}
+.emoji-text {
+  font-family: "Noto Color Emoji", sans-serif;
+}
+.pixel-heading {
+  font-family: "Press Start 2P", cursive;
+}
+
+
+@media (min-width: 1024px) and (hover: none) and (orientation: landscape) {
+  body {
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+  body {
+    background-color: rgba(0, 0, 0, 0.500);
+  }
+}
+/* Add this in your global css if not using Tailwind plugin */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

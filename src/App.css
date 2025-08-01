@@ -1,0 +1,183 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      30deg,
+      #111111 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #111111 87.5%,
+      #111111
+    ),
+    linear-gradient(
+      150deg,
+      #111111 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #111111 87.5%,
+      #111111
+    ),
+    linear-gradient(
+      30deg,
+      #111111 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #111111 87.5%,
+      #111111
+    ),
+    linear-gradient(
+      150deg,
+      #111111 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #111111 87.5%,
+      #111111
+    ),
+    linear-gradient(
+      60deg,
+      #77777777 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #77777777 75%,
+      #77777777
+    ),
+    linear-gradient(
+      60deg,
+      #77777777 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #77777777 75%,
+      #77777777
+    );
+  background-position:
+    0 0,
+    0 0,
+    40px 70px,
+    40px 70px,
+    0 0,
+    40px 70px;
+  background-color: #000000;
+  background-size: 80px 140px;
+  box-shadow: inset 0 0 100px rgba(255, 215, 0, 0.1);
+}
+
+.shadoww {
+  box-shadow:
+    5px 5px 10px 2px rgb(30, 30, 30), /* dark depth base */
+    5px 5px 10px 2px rgb(19, 19, 19); /* colored glow highlight */
+}
+
+.stripes{
+  width: 100%;
+  height: 100%;
+  --color: rgba(42, 42, 42, 0.782);
+  background-color: #acacac00;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+}
+
+.dark-insta {
+  background-image: linear-gradient(
+    to bottom,
+    #000000 15%,     /* pure black */
+    #151135 30%,     /* dark indigo/navy */
+    #2a1d5a 45%,     /* deeper purple - more contrast */
+    #5e2172 60%,     /* dark magenta */
+    #a32080 85%,     /* less neon, more velvet pink */
+    #d70aa4 100%     /* toned down bright pink */
+  );
+}
+
+.pink-white{
+  background: linear-gradient(
+    to bottom,
+     #d70aa4 0%,
+  #e346b6 25%,
+  #ec7fcc 40%,
+  #f5b3de 50%,
+  #ffffff 100%
+  );
+}
+
+
+.animated-border {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background-size: 300% 100%;
+  animation: border-animate 1s linear infinite alternate-reverse;
+  z-index: 2;
+}
+
+@keyframes border-animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.neon-text {
+  background: linear-gradient(
+    90deg,
+    #5700a8,
+    #ff00f7,
+    #e3006e,
+    #a100d7,
+    #0798ff,
+    #4212ff
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neon-glow 5s linear infinite alternate;
+  font-weight: bold;
+  z-index: 2;
+}
+
+@keyframes neon-glow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.voilet {
+  --bg-size: 48px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-image: repeating-conic-gradient(
+      from 0deg at 0% 0%,
+      #8e1d9e 0deg,
+      #8ca6db 5deg
+    ),
+    repeating-conic-gradient(from 0deg at 100% 100%, #8ca6db 0deg, #8e1d9e 5deg);
+  background-size: var(--bg-size) var(--bg-size);
+  background-blend-mode: screen;
+}
+
+.light-pink {
+  background: linear-gradient(
+  to bottom,
+  #d70aa4 0%,
+  #ff8de2 20%,
+  #ffcbef 30%,
+  #ffffff 50%,
+  #ffffff 100%
+);
+
+}
