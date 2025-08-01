@@ -44,7 +44,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-[30rem] md:min-h-[33rem] lg:min-h-[37rem] xl:min-h-[44.7rem] font-poppins text-white flex items-center sm:px-6 lg:px-12 p-5 bg-gradient-to-b from-black via-slate-950 to-gray-600">
-      <div className="container md:flex-row flex-col-reverse max-h-fit md:min-h-[28rem] lg:min-h-[33rem] xl:min-h-[40rem] flex items-center justify-between gap-0 md:gap-6 lg:gap-8 rounded-3xl mx-auto shadoww bg-opacity-30 p-2 md:px-6 lg:px-10">
+      <div className="container md:flex-row flex-col-reverse max-h-fit md:min-h-[28rem] lg:min-h-[33rem] xl:min-h-[40rem] flex items-center justify-between gap-0 md:gap-6 lg:gap-8 rounded-3xl mx-auto shadoww bg-opacity-30 p-2 md:px-6 lg:px-10 min-w-[80vh">
         
         {/* Text Content */}
         <div className="w-full md:w-3/5 flex flex-col gap-1 lg:gap-4 px-0 sm:px-1 py-0.5 sm:py-6 text-center md:text-left mx-auto md:mx-0">
@@ -59,8 +59,8 @@ const Hero = () => {
             Developer
           </h2>
 
-          <p id="summary" className="text-[0.8rem] opacity-0 md:text-[0.95rem] lg:text-lg xl:text-xl text-white bg-neutral-950 p-1 leading-relaxed font-lexend font-medium max-w-[95%] sm:max-w-[90%] md:translate-y-3 lg:translate-y-5 md:max-w-[37rem] mx-auto md:mx-0 rounded-md">
-            I'm a front-end developer fresher with a solid foundation in HTML, CSS, JavaScript, and React. I build clean, responsive UIs and have real-world project and hackathon experience. Currently growing into a full-stack role with strong problem-solving skills.
+          <p id="summary" className="text-[0.76rem] opacity-0 md:text-[0.95rem] lg:text-lg xl:text-xl text-white bg-neutral-950 p-1 leading-relaxed font-lexend font-medium max-w-[95%] sm:max-w-[90%] md:translate-y-3 lg:translate-y-5 md:max-w-[37rem] mx-auto md:mx-0 rounded-md">
+            I'm a front-end developer fresher with a solid foundation in HTML, CSS, JavaScript, and ReactJS. I build clean, scalable, responsive UIs and have real-world project and hackathon experience. Currently growing into a full-stack role with strong problem-solving skills.
           </p>
         </div>
 

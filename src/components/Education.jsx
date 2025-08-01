@@ -77,7 +77,7 @@ const AnimatedCard = ({ edu, index }) => {
   return (
     <div
       ref={cardRef}
-      className="max-h-[21.3rem] md:max-h-[22rem] sm:max-h-none aspect-[3/4] sm:aspect-auto flex flex-col md:flex-row w-full max-w-[90vw] sm:max-w-[28rem] md:max-w-[36rem] lg:max-w-[40rem]
+      className="max-h-[21.55rem] md:max-h-[22rem] sm:max-h-none aspect-[3/4] sm:aspect-auto flex flex-col md:flex-row w-full max-w-[90vw] sm:max-w-[28rem] md:max-w-[36rem] lg:max-w-[40rem]
         bg-gradient-to-bl from-[#0f172a] via-[#100d4c] to-[#0f172a] border border-white/30
         rounded-2xl md:rounded-3xl overflow-hidden transition-all duration-200 
         hover:shadow-md"
@@ -96,7 +96,7 @@ const AnimatedCard = ({ edu, index }) => {
       {/* Right: Content */}
       <div className="w-full md:w-[65%] relative flex flex-col justify-between px-1 py-1 sm:px-1 md:py-2 md:px-2 gap-1">
         <div className="flex-1 space-y-1 md:space-y-1">
-          <h3 className="text-[0.90rem] font-lexend sm:text-base md:text-[0.93rem] lg:text-[0.99rem] xl:text-base text-cyan-500 font-semibold line-clamp-1">
+          <h3 className="text-[0.99rem] font-lexend sm:text-base md:text-[0.93rem] lg:text-[0.99rem] xl:text-base text-cyan-500 font-semibold line-clamp-1">
             {edu.title}
           </h3>
           <h2 className="text-[0.75rem] font-lexend md:text-xs lg:text-base font-lexend font-semibold text-gray-200 line-clamp-1">
@@ -152,10 +152,10 @@ const Education = () => {
       const carousel = document.getElementById("carousel");
       carousel.scrollBy({ left: -carousel.offsetWidth, behavior: "smooth" });
     }}
-    className="absolute left-0 top-1/2 transform -translate-y-1/2  bg-black/50  text-white p-2 rounded-full z-20"
+    className="absolute left-[-12px] top-1/2 transform -translate-y-1/2  text-slate-400 p-2 rounded-full z-20"
     aria-label="Previous"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
     </svg>
   </button>
@@ -166,10 +166,10 @@ const Education = () => {
       const carousel = document.getElementById("carousel");
       carousel.scrollBy({ left: carousel.offsetWidth, behavior: "smooth" });
     }}
-    className="absolute right-[0px] top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full z-20"
+    className="absolute right-[-12px] top-1/2 transform -translate-y-1/2 text-slate-400 p-2 rounded-full z-20"
     aria-label="Next"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
     </svg>
   </button>

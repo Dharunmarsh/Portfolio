@@ -44,7 +44,7 @@ const SkillList = () => {
       {/* Left Column */}
       <div className="w-full lg:w-[65%] xl:w-1/2 h-auto max-w-3xl md:px-6 md:pt-5 lg:px-4 lg:py-1 text-white pb-10 lg:pb-0">
         <div className="w-full flex items-center font-poppins p-2  pt-5 md:pt-1 lg:pb-0 lg:pt-0 lg:px-4">
-          <h1 className="text-3xl lg:text-4xl font-bold neon-text text-center mx-auto lg:-translate-y-3 ">Skills-Set</h1>
+          <h1 className="text-3xl lg:text-4xl font-bold neon-text text-center mx-auto xl:-translate-y-3 ">Skills-Set</h1>
           <button
             className="lg:hidden absolute right-2.5 text-[0.6rem] md:text-lg md:right-6 font-semibold px-2 py-1.5 md:p-2 border-2 text-pink-500 ml-auto"
             style={{
@@ -60,7 +60,7 @@ const SkillList = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 gap-5 sm:gap-4 md:gap-y-5 md:gap-x-7 pb-5 p-5">
+        <div className="grid grid-cols-2 gap-5 sm:gap-4 md:gap-y-5 md:gap-x-10 pb-0 p-5 ">
           {skills.map((skill) => (
             <div
               key={skill.id}
@@ -108,7 +108,7 @@ const SkillList = () => {
         </div>
 
         {/* Disclaimer for laptop */}
-        <p className="text-center hidden lg:block text-gray-200 italic lg:mb-3 xl:mb-0 lg:text-[0.9rem] xl:text-[1rem]">
+        <p className="text-center mt-4 hidden lg:block text-gray-200 italic lg:mb-3 xl:mb-0 lg:text-[0.9rem] xl:text-[1rem]">
           The listed skills and ratings are based on work to a real projects with fresher level experience.
         </p>
       </div>

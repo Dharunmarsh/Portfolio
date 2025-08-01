@@ -54,8 +54,8 @@
 /* === Progress Widths with Animation Delay === */
 .skill-per.html { width: 80%; animation-delay: 0.5s; }
 .skill-per.css { width: 30%; animation-delay: 0.5s; }
-.skill-per.javascript { width: 40%; animation-delay: 0.5s; }
-.skill-per.nodejs { width: 70%; animation-delay: 0.5s; }
+.skill-per.javascript { width: 70%; animation-delay: 0.5s; }
+.skill-per.nodejs { width: 60%; animation-delay: 0.5s; }
 
 /* === Keyframes for Animation === */
 @keyframes progress {

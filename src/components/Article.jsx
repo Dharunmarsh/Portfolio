@@ -40,7 +40,7 @@ const Article = ({ project }) => {
   return (
     <article className="group w-full 
       max-w-[22.5rem] md:max-w-[24rem] 
-      lg:max-w-[20rem] xl:max-w-[26rem] 
+      lg:max-w-[20rem] xl:max-w-[23rem] 
       h-auto rounded-xl p-1.5 border-[1.5px] border-gray-400 
       cursor-pointer bg-white shadow-md transition-transform duration-300 
       ease-in-out hover:scale-[1.03] hover:shadow-xl">
@@ -48,7 +48,7 @@ const Article = ({ project }) => {
       {/* Image */}
       <div className="w-full relative 
         h-[160px] md:h-[160px] 
-        lg:h-[150px] xl:h-[190px]
+        lg:h-[150px] xl:h-[170px]
         overflow-hidden rounded-lg bg-gray-50 flex items-center justify-center">
         <img
           loading='lazy'
@@ -62,7 +62,7 @@ const Article = ({ project }) => {
       <div className="flex flex-col gap-1 pt-1 flex-grow">
         <div className="flex justify-between px-1 bg-white items-center">
           <h1 className="text-[1.2rem] font-bold font-poppins text-[#1a1a1a]">{project.title}</h1>
-          <div className="rounded-full mr-2 w-7 h-7 lg:w-10 lg:h-10 text-blue-400 sm:text-black lg:p-1 flex items-center justify-center transition-all duration-500 ease-in-out group-hover:rotate-[-45deg] group-hover:bg-[#ffe6f9]">
+          <div className="rounded-full xl:mr-2 w-7 h-7 lg:w-10 lg:h-10 text-blue-400 sm:text-black lg:p-1 flex items-center justify-center transition-all duration-500 ease-in-out group-hover:rotate-[-45deg] group-hover:bg-[#ffe6f9]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.7em"
@@ -80,7 +80,7 @@ const Article = ({ project }) => {
           </div>
         </div>
 
-        <p className="text-[0.759rem] md:text-[0.766rem] lg:text-[0.69rem] xl:text-[0.90rem] text-gray-600 px-1 font-lexend">
+        <p className="text-[0.759rem] md:text-[0.766rem] lg:text-[0.69rem] xl:text-[0.80rem] text-gray-600 px-1 font-lexend">
           {project.summary}
         </p>
 
@@ -150,7 +150,7 @@ export default function ArticleCards() {
       const carousel = document.getElementById("carousell");
       carousel.scrollBy({ left: -carousel.offsetWidth, behavior: "smooth" });
     }}
-    className="absolute left-0 top-1/2 transform -translate-y-1/2 text-rose-500 p-2 rounded-full z-20"
+    className="absolute left-[-8px] top-1/2 transform -translate-y-1/2 text-rose-500 p-2 rounded-full z-20"
     aria-label="Previous"
   >
     <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -164,7 +164,7 @@ export default function ArticleCards() {
       const carousel = document.getElementById("carousell");
       carousel.scrollBy({ left: carousel.offsetWidth, behavior: "smooth" });
     }}
-    className="absolute right-[1px] top-1/2 transform -translate-y-1/2 hover:bg-black/70 text-rose-500 p-2 rounded-full z-20"
+    className="absolute right-[-8px] top-1/2 transform -translate-y-1/2 hover:bg-black/70 text-rose-500 p-2 rounded-full z-20"
     aria-label="Next"
   >
     <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -174,13 +174,14 @@ export default function ArticleCards() {
       </div>
 
       {/* Grid for desktop */}
-      <div className="hidden md:grid grid-cols-1 bg-red-600 md:grid-cols-2 lg:grid-cols-3 gap-0 py-2">
+        <div className="max-w-fit md:grid grid-cols-1 rounded md:grid-cols-2 xl:p-5 lg:grid-cols-3 xl:px-2 gap-8 lg:gap-5 xl:gap-10">
         {projectsData.map((project, i) => (
-          <div key={i} ref={addToRefs} className='w-full flex justify-center bg-amber-300 rounded-4xl '>
+          <div key={i} ref={addToRefs} className=' '>
             <Article project={project} />
           </div>
         ))}
       </div>
     </div>
+      
   );
 }
