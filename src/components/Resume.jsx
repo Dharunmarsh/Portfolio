@@ -59,3 +59,4 @@ const Resume = ({Title}) => {
 };
 
 export default Resume;
+
