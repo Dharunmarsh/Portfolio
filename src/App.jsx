@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import Education from './components/Education'
 import SkillList from './components/Skills'
 import Exp from './components/Exp'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 function App() {
 
   return (
@@ -14,6 +16,8 @@ function App() {
     <Education />
     <SkillList />
     <Exp />
+    <Contact />
+    <Footer />
     </div>
   )
 }

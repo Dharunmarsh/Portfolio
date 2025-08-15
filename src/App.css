@@ -1,72 +1,25 @@
-.container {
+.containerr {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-      30deg,
-      #111111 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #111111 87.5%,
-      #111111
+  background: #000000;
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(255, 255, 255, 0.2);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
     ),
     linear-gradient(
-      150deg,
-      #111111 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #111111 87.5%,
-      #111111
-    ),
-    linear-gradient(
-      30deg,
-      #111111 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #111111 87.5%,
-      #111111
-    ),
-    linear-gradient(
-      150deg,
-      #111111 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #111111 87.5%,
-      #111111
-    ),
-    linear-gradient(
-      60deg,
-      #77777777 25%,
-      transparent 25.5%,
-      transparent 75%,
-      #77777777 75%,
-      #77777777
-    ),
-    linear-gradient(
-      60deg,
-      #77777777 25%,
-      transparent 25.5%,
-      transparent 75%,
-      #77777777 75%,
-      #77777777
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
     );
-  background-position:
-    0 0,
-    0 0,
-    40px 70px,
-    40px 70px,
-    0 0,
-    40px 70px;
-  background-color: #000000;
-  background-size: 80px 140px;
-  box-shadow: inset 0 0 100px rgba(255, 215, 0, 0.1);
+  background-size: var(--gap) var(--gap);
 }
-
-.shadoww {
-  box-shadow:
-    5px 5px 10px 2px rgb(30, 30, 30), /* dark depth base */
-    5px 5px 10px 2px rgb(19, 19, 19); /* colored glow highlight */
-}
-
 .stripes{
   width: 100%;
   height: 100%;
@@ -155,21 +108,6 @@
   }
 }
 
-.voilet {
-  --bg-size: 48px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  background-image: repeating-conic-gradient(
-      from 0deg at 0% 0%,
-      #8e1d9e 0deg,
-      #8ca6db 5deg
-    ),
-    repeating-conic-gradient(from 0deg at 100% 100%, #8ca6db 0deg, #8e1d9e 5deg);
-  background-size: var(--bg-size) var(--bg-size);
-  background-blend-mode: screen;
-}
-
 .light-pink {
   background: linear-gradient(
   to bottom,
@@ -181,3 +119,19 @@
 );
 
 }
+.white-black{
+ background: linear-gradient(
+  to bottom,
+  white 0%,
+  #d6e4f0 20%,  /* very light bluish slate */
+  #8fa9c8 35%,  /* light steel blue */
+  #365b82 60%,  /* deep slate blue */
+  #0a1f44 80%,  /* thick navy blue */
+  black 100%
+);
+}
+
+.shiny-slate {
+    color: #64748b; /* custom mix */
+}
+

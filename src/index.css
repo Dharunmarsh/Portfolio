@@ -6,7 +6,6 @@
 
 /* ✅ Apply default font globally */
 body {
-  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -19,7 +18,7 @@ body {
 .font-emoji {
   font-family: 'Noto Color Emoji', sans-serif;
 }
-.font-serif {
+.font-seriff {
   font-family: 'DM Serif Display', serif;
 }
 .font-comic {
@@ -71,6 +70,9 @@ body {
 }
 .scrollbar-hide {
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  -scrollbar-width: none;
 }
 
+section {
+  scroll-margin-top: 80px; /* match your navbar height */
+}

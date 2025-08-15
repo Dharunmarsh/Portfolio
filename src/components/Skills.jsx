@@ -16,16 +16,17 @@ import SkillBox from "./SkillBox";
 import bgImage from "../assets/images/bg.png";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+
 // Skills data
 const skills = [
-  { id: 1, name: "HTML", icon: <FaHtml5 className="text-orange-500 text-[1.2rem] sm:text-2xl lg:text-xl xl:text-2xl" />, rating: 4 },
-  { id: 2, name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 text-[1.2rem] lg:text-xl xl:text-2xl sm:text-2xl" />, rating: 4 },
-  { id: 3, name: "JavaScript", icon: <FaJsSquare className="text-yellow-400 text-[1.2rem] lg:text-xl xl:text-2xl sm:text-2xl" />, rating: 4 },
+  { id: 1, name: "HTML", icon: <FaHtml5 className="text-orange-500 text-[1.2rem] sm:text-2xl lg:text-xl xl:text-2xl" />, rating: 5 },
+  { id: 2, name: "CSS/Tailwind", icon: <SiTailwindcss className="text-cyan-400 text-[1.2rem] lg:text-xl xl:text-2xl sm:text-2xl" />, rating: 5 },
+  { id: 3, name: "JavaScript", icon: <FaJsSquare className="text-yellow-400 text-[1.2rem] lg:text-xl xl:text-2xl sm:text-2xl" />, rating: 4.5 },
   { id: 4, name: "ReactJS", icon: <FaReact className="text-cyan-300 text-[1.2rem] sm:text-2xl lg:text-xl xl:text-2xl" />, rating: 4 },
   { id: 5, name: "UI/UX", icon: <PiSquaresFourFill className="text-pink-400 text-[1.2rem] sm:text-2xl lg:text-xl xl:text-2xl" />, rating: 3.5 },
   { id: 6, name: "Express JS", icon: <FaNodeJs className="text-green-600 text-[1.2rem] sm:text-2xl lg:text-xl xl:text-2xl" />, rating: 3 },
   { id: 7, name: "MongoDB", icon: <SiMongodb className="text-green-400 text-[1.2rem] sm:text-2xl lg:text-xl xl:text-2xl" />, rating: 3 },
-  { id: 8, name: "Git & GitHub", icon: <FaGitAlt className="text-orange-400 text-[1.2rem] lg:text-xl xl:text-2xl sm:text-2xl" />, rating: 3.5 },
+  { id: 8, name: "Git & GitHub", icon: <FaGitAlt className="text-orange-400 text-[1.2rem] lg:text-xl xl:text-2xl sm:text-2xl" />, rating: 4.5 },
   { id: 9, name: "Java", icon: <FaJava className="text-red-600 text-[1.2rem] sm:text-2xl lg:text-xl xl:text-2xl" />, rating: 3.5 },
   { id: 10, name: "SQL / MySQL", icon: <FaDatabase className="text-blue-400 text-[1.2rem] lg:text-xl xl:text-2xl sm:text-2xl" />, rating: 4 },
   { id: 11, name: "Problem Solving", icon: <FaBrain className="text-purple-800 text-[1.2rem] lg:text-xl xl:text-2xl sm:text-2xl" />, rating: 3.5 },
@@ -40,11 +41,11 @@ const SkillList = () => {
   const isTablet = useMediaQuery("(max-width: 1023px)");
 
   return (
-    <div className="xl:min-h-[45rem] relative min-h-fit flex flex-col lg:flex-row items-center justify-between  dark-insta -z-10">
+<div id="Skills" className="xl:min-h-[45rem] relative min-h-fit flex flex-col lg:flex-row items-center justify-between dark-insta -z-10">
       {/* Left Column */}
-      <div className="w-full lg:w-[65%] xl:w-1/2 h-auto max-w-3xl md:px-6 md:pt-5 lg:px-4 lg:py-1 text-white pb-10 lg:pb-0">
+      <div className="w-full lg:w-[65%] xl:w-1/2 h-auto max-w-3xl md:px-6 md:pt-5 lg:px-4 lg:py-1 text-white">
         <div className="w-full flex items-center font-poppins p-2  pt-5 md:pt-1 lg:pb-0 lg:pt-0 lg:px-4">
-          <h1 className="text-3xl lg:text-4xl font-bold neon-text text-center mx-auto xl:-translate-y-3 ">Skills-Set</h1>
+          <h1 className="text-3xl  lg:text-4xl font-bold neon-text text-center mx-auto lg:translate-y-2 xl:-translate-y-4 ">Skills-Set</h1>
           <button
             className="lg:hidden absolute right-2.5 text-[0.6rem] md:text-lg md:right-6 font-semibold px-2 py-1.5 md:p-2 border-2 text-pink-500 ml-auto"
             style={{
@@ -60,7 +61,7 @@ const SkillList = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 gap-5 sm:gap-4 md:gap-y-5 md:gap-x-10 pb-0 p-5 ">
+        <div className="grid grid-cols-2 pt-2 gap-5 sm:gap-4 md:gap-y-5 md:gap-x-10 px-4 lg:px-5 md:pt-5">
           {skills.map((skill) => (
             <div
               key={skill.id}
@@ -68,7 +69,7 @@ const SkillList = () => {
             >
               <div className="flex items-center gap-1 sm:gap-1.5 md:gap-1">
                 <div>{skill.icon}</div>
-                <span id="skills" className="text-lg lg:text-[0.95rem] xl:text-[1rem] font-semibold font-poppins tracking-wide whitespace-nowrap">
+                <span className="text-lg lg:text-[0.95rem] xl:text-[1rem] font-semibold font-poppins tracking-wide whitespace-nowrap">
                   <span className="block  text-[0.8rem] sm:hidden">
                     {
                       skill.id === 2 ? "Tailwind" :
@@ -139,9 +140,10 @@ const SkillList = () => {
       </div>
 
       {/* Mobile Disclaimer for mobile to tablet */}
-      <p className="text-center absolute bottom-2.5 font-semibold md:bottom-5 block lg:hidden text-gray-300 italic text-sm md:text-[1rem]">
-        The listed skills and ratings are based on work to real projects <br className="sm:hidden" /> with fresher level experience.
-      </p>
+<p className="text-center py-2 font-semibold block lg:hidden text-gray-300 italic text-sm md:text-[1rem]">
+  The listed skills and ratings are based on work to real projects <br className="sm:hidden" /> with fresher level experience.
+</p>
+
     </div>
   );
 };

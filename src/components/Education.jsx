@@ -45,30 +45,39 @@ const tagStyles = [
 const AnimatedCard = ({ edu, index }) => {
   const cardRef = useRef(null);
 
- useEffect(() => {
+useEffect(() => {
   const element = cardRef.current;
-    if (window.innerWidth < 768) return; // Skip animation on small screens
+  if (window.innerWidth < 768) return; // Skip on small screens
 
+  // GPU hint
+  gsap.set(element, { willChange: "transform, opacity" });
 
   gsap.fromTo(
     element,
     {
-      y: 60,           // Slightly less vertical travel
+      y: 40,       // Smaller travel distance
       opacity: 0,
-      scale: 0.96,     // Subtle scale-in still there
+      scale: 0.99, // Slightly closer to 1 for less GPU work
     },
     {
       y: 0,
       opacity: 1,
       scale: 1,
-      duration: 0.6,   // Faster but not jarring
-      ease: "power3.out",  // Still smooth but snappier than power4
-      delay: index * 0.10, // Reduced delay multiplier
+      duration: 0.7, // Smooth but quick
+      ease: "power1.out", // Lighter easing
+      delay: index * 0.06, // Faster stagger for less wait
+      overwrite: "auto",
       scrollTrigger: {
         trigger: element,
-        start: "top 85%", // Fires earlier in the viewport
-        end: "bottom 85%",
+        start: "top 92%", // Fires earlier, avoids snapping in
         toggleActions: "play none none none",
+        once: true,       // Play only once for perf
+        scrub: false,     // No extra tracking = smoother
+        fastScrollEnd: true,
+      },
+      onComplete: () => {
+        // Remove GPU hint after animation to save memory
+        gsap.set(element, { willChange: "auto" });
       },
     }
   );
@@ -113,7 +122,7 @@ const AnimatedCard = ({ edu, index }) => {
           {edu.tags.map((tag, i) => (
             <span
               key={i}
-              className={`text-[0.65rem] font-lexend min-w-[40px] text-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-2xl ${tagStyles[i % tagStyles.length]} shadow-sm backdrop-blur-sm`}
+              className={`text-[0.65rem] font-lexend min-w-[50px] text-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-2xl ${tagStyles[i % tagStyles.length]} shadow-sm backdrop-blur-sm`}
             >
               {tag}
             </span>
@@ -126,9 +135,9 @@ const AnimatedCard = ({ edu, index }) => {
 
 const Education = () => {
   return (
-    <section className="w-full h-full min-h-[28.5rem] relative md:min-h-fit lg:min-h-[35rem] gap-10 xl:min-h-[43rem] bg-gradient-to-b from-gray-600 via-slate-950 to-black sm:px-12 md:px-8 lg:px-0 py-5 font-poppins -z-20 inset-0">
-      <div className="absolute inset-0 -z-10 pointer-events-none stripes" />
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold p-2 -translate-y-2 font-poppins text-center xl:translate-y-2  text-gray-300">
+    <section id="Education" className="w-full h-full min-h-[28.5rem] relative md:min-h-fit lg:min-h-[30rem] gap-10 xl:min-h-[40rem] bg-gradient-to-b from-gray-600 via-slate-950 to-black sm:px-12 md:px-8 lg:px-0 py-5 font-poppins -z-20 inset-0">
+      <div  className="absolute inset-0 -z-10 pointer-events-none stripes" />
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold p-2 -translate-y-2 font-poppins text-center lg:translate-y-2  text-gray-300">
         <span className="">Education</span> <span>Highlights</span>
       </h1>
 
@@ -176,7 +185,7 @@ const Education = () => {
 </div>
 
       {/* tab and pc */}
-      <div className=" hidden md:flex flex-col lg:flex-row w-full py-2 md:gap-8 lg:gap-0 ">
+      <div className=" hidden md:flex flex-row w-full md:gap-8 lg:gap-0 ">
         
         <div className="flex flex-col flex-grow gap-6 md:gap-10 lg:w-[60%] lg:gap-8 w-full items-center p-3 lg:scale-90">
           {educationData.map((edu, index) => (
