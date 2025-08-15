@@ -66,7 +66,7 @@ const Form = () => {
   className="
     w-full 
     max-w-[95%] sm:max-w-sm md:min-w-[26rem] 
-    lg:max-w-[28rem] xl:max-w-xl  /* smaller on lg */
+    lg:min-w-[35rem] xl:max-w-xl  /* smaller on lg */
     relative 
     shadow-2xl 
     border-slate-800 
@@ -146,12 +146,12 @@ const Form = () => {
     </div>
 
     {/* CAPTCHA */}
-    <div className="w-fit h-fit pt-1 lg:scale-[0.95]">
+    <div className="w-fit h-fit pt-1">
       <Turnstile
-        className="bg-transparent"
+        className="bg-transparent  "
         siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
         onSuccess={(token) => setToken(token)}
-        options={{ theme: "light", size: "flexible" }}
+        options={{ theme: "light", size: "flexible", refreshTimeout: 60 , }}
       />
     </div>
 
@@ -169,16 +169,31 @@ const Form = () => {
     </button>
 
     {/* Toast */}
-    <ToastContainer
-      position="bottom-left"
-      autoClose={3000}
-      hideProgressBar={false}
-      newestOnTop
-      closeOnClick
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-    />
+   <ToastContainer
+  position="top-left"
+  autoClose={5000}
+  hideProgressBar={false}
+  newestOnTop
+  closeOnClick
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  style={{
+    position: "absolute", // inside form
+    top: "-5rem",
+    left: "-3rem",
+    width: "auto",
+    maxWidth: "250px", // so it’s not massive
+  }}
+  toastStyle={{
+    backgroundColor: "#fff",
+    fontSize: "0.875rem",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+    borderRadius: "6px",
+    padding: "8px 12px"
+  }}
+/>
+
   </div>
 </form>
     </>

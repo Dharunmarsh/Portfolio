@@ -17,7 +17,7 @@ export default function Exp() {
       <Cup />
     </div>
 
-        <div className="flex flex-row justify-center md:hidden lg:flex items-center pl-5 py-3 lg:gap-32">
+        <div className="flex flex-row justify-center md:hidden lg:flex items-center pl-5 py-0 lg:py-3 lg:gap-32">
             <Cup/>
             <Prism />
 </div>

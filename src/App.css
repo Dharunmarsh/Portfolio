@@ -135,3 +135,22 @@
     color: #64748b; /* custom mix */
 }
 
+.toast-position {
+  position: absolute !important;
+  top: -5rem;
+  left: 0rem;
+  width: auto;
+  max-width: 250px;
+}
+
+@media (min-width: 640px) { /* sm */
+  .toast-position { left: -3rem; }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .toast-position { left: -4rem; }
+}
+
+@media (min-width: 1280px) { /* xl */
+  .toast-position { left: -5rem; }
+}
