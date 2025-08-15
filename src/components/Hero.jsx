@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-//import heroImage from "../assets/images/dharun.jpg";
 import Matrix from "./Matrix";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
@@ -106,3 +105,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
