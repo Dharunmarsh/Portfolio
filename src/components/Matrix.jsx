@@ -1,5 +1,5 @@
 import React from 'react'
-import './matrix.css'; // Assuming you have a CSS file for styling the matrix effect
+import './Matrix.css'; // Assuming you have a CSS file for styling the matrix effect
 export default function Matrix() {
   return (
     <div class="matrix-container">
@@ -216,4 +216,5 @@ export default function Matrix() {
 </div>
   )
 }
+
 
