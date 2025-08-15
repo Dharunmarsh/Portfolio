@@ -1,5 +1,5 @@
 import React from 'react';
-import './Resume.css';
+import './resume.css';
 import { handleDownload } from './Utils';
 import Profile from "../assets/images/profilee.png";
 
