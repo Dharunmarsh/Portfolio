@@ -1,7 +1,7 @@
 import React from 'react';
-import './resume.css';
+import './Resume.css';
 import { handleDownload } from './Utils';
-import Profile from "../assets/images/profilee.png";
+import Profile from "../assets/images/Profilee.png";
 
 
 const Resume = ({Title}) => {

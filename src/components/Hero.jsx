@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Matrix from "./Matrix";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import Dharun from "../assets/images/dharun.jpg"; // Adjust the import path as necessary
 
 gsap.registerPlugin(SplitText);
 
@@ -94,7 +95,7 @@ const Hero = () => {
         <div className="translate- sm:translate-0 lg:mr-2 xl:mr-7 flex justify-center items-center">
           <img
             loading="lazy"
-            src="https://github.com/Dharunmarsh/portfolio/blob/main/src/assets/images/dharun.jpg?raw=true"
+            src={Dharun}
             alt="Dharun Marshall"
             className="w-41 sm:w-52 md:w-65 lg:w-77 xl:w-100 object-cover rounded-3xl transition duration-500 ease-in-out grayscale hover:grayscale-0 shadow-2xl"
           />
