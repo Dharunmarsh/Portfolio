@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Page from "./Page";
-import clgme from "../assets/images/clgme.jpg";
+import clgme from "../assets/images/college.jpg";
 import myself from "../assets/images/myself.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -18,7 +18,7 @@ const educationData = [
     summary:
       "Developed a strong grasp of full-stack development, blending frontend design with backend logic. Enhanced my problem-solving mindset through real-world hackathons, collaborative projects, and hands-on coding challenges.",
     tags: ["React", "Programming", "DSA"],
-    imageUrl: myself,
+    imageUrl: clgme,
   },
   {
     title: "Diploma in Computer Science",
@@ -28,7 +28,7 @@ const educationData = [
     summary:
       "Studied during the pandemic, where I built a solid technical base in computer science, This period nurtured my curiosity and helped shape my career in computer science principles and mathematical reasoning.",
     tags: ["Computer", "Science", "Mathematics"],
-    imageUrl: clgme,
+    imageUrl: null,
   },
 ];
 

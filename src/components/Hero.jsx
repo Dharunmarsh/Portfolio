@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Matrix from "./Matrix";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import Dharun from "../assets/images/dharun.jpg"; // Adjust the import path as necessary
+import Dharun from "../assets/images/Profile.jpg"; // Adjust the import path as necessary
 
 gsap.registerPlugin(SplitText);
 
