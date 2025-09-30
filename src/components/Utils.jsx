@@ -1,11 +1,12 @@
-import myResume from '../assets/files/Dharun_Marshall_Resume.pdf'; // Importing the resume file
+import myResume from '../assets/files/DharunMarshallResume.pdf'; // Importing the resume file
 
 
 export const handleDownload = () => {
     const link = document.createElement('a');
     link.href = myResume;
-    link.download = 'Dharun_Marshall_Resume.pdf';
+    link.download = 'DharunMarshallResume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
   };
